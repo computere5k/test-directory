@@ -37,13 +37,13 @@
 		photoName = xmlDoc.getElementsByTagName("PHOTO");  
 		 
          for (i = 0; i < firstName.length; i++) if (title[i].childNodes[0].nodeValue == "Web Manager") 
-         {{row1 += "</div><div class='col-lg-3'><figure><img src='" + photoName[i].childNodes[0].nodeValue + "' class='w-100'/></figure><h3>" + firstName[i].childNodes[0].nodeValue + " " + LastName[i].childNodes[0].nodeValue + "</h3><p>"  + title[i].childNodes[0].nodeValue + "</p></div>";}
+         {{row1 += "</div><div class='col-lg-3 mb-2'><figure class='mb-2'><img src='" + photoName[i].childNodes[0].nodeValue + "' class='w-100'/></figure><h3 class='my-0'>" + firstName[i].childNodes[0].nodeValue + " " + LastName[i].childNodes[0].nodeValue + "</h3><p>"  + title[i].childNodes[0].nodeValue + "</p></div>";}
         document.getElementById("manager").innerHTML = "<div class='col-12'><h2>Manager</h2></div>" + row1;}
              
 
           
         for (i = 0; i < firstName.length; i++) if (title[i].childNodes[0].nodeValue != "Web Manager") 
-        {{row2 += "<div class='col-lg-3'><figure><img src='" + photoName[i].childNodes[0].nodeValue + "' class='w-100'/></figure><h3>" + firstName[i].childNodes[0].nodeValue + " " + LastName[i].childNodes[0].nodeValue + "</h3><p>"  + title[i].childNodes[0].nodeValue + "</p></div>";}
+        {{row2 += "<div class='col-lg-3 mb-2'><figure class='mb-2'><img src='" + photoName[i].childNodes[0].nodeValue + "' class='w-100'/></figure><h3 class='my-0'>" + firstName[i].childNodes[0].nodeValue + " " + LastName[i].childNodes[0].nodeValue + "</h3><p>"  + title[i].childNodes[0].nodeValue + "</p></div>";}
         document.getElementById("team-members").innerHTML = "<div class='col-12'><h2>Team Members</h2></div>" + row2;}
       }
 		loadXMLDoc()
